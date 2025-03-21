@@ -2,7 +2,7 @@
 
 // const array1 = ["a", "b", "c"];
 
-// array1.forEach((element) => console.log(element));
+// array1.forEach((element) => console.log(element));  // We have to give a callback function in forEach loop.
 
 // Expected output: "a"
 // Expected output: "b"
