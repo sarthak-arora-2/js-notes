@@ -8,6 +8,8 @@
 
 // console.log(values);
 
+// The filter() method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+// In filter we filter an array using a condition.
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const newNums1 = myNums.filter( (num) => num > 4 )  // Without return statement.
