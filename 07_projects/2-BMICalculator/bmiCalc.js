@@ -12,15 +12,18 @@ form.addEventListener('submit', function (e) {
   } else if (weight === '' || weight < 0 || isNaN(weight)) {
     results.innerHTML = `Please enter valid weight ${weight}`;
   } else {
+// This adds the weight guide text as the first child of weight-guide.
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
     results.innerHTML = `<span>${bmi}</span>`;
     const weightGuide = document.querySelector('#weight-guide');
+
     const divToRemove = document.querySelector('.guide');
     if (divToRemove !== null) {  // if already a div containing weight guide text is present then we remove that div.
       divToRemove.remove();
     }
     const div = document.createElement('div');
     div.className = 'guide';
+
     if (bmi < 18.6) {
       // const text = document.createTextNode(`For ${bmi} bmi : Under Weight`);
       // div.appendChild(text);
@@ -37,5 +40,20 @@ form.addEventListener('submit', function (e) {
     weightGuide.insertBefore(div, weightGuide.firstChild);
     // console.log(document.querySelector('.guide'));
     // console.log(document.querySelectorAll('.guide'));
+
+// ----------------------------------------------------------------------------------------------
+
+// // This overwrites the weightGuide.innerHTML.
+    // const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    // results.innerHTML = `<span>${bmi}</span>`;
+    // const weightGuide = document.querySelector('#weight-guide');
+
+    // if (bmi < 18.6) {
+    //   weightGuide.innerHTML = `<div>For ${bmi} bmi : Under Weight</div>`
+    // } else if (bmi > 18.6 && bmi < 24.9) {
+    //   weightGuide.innerHTML = `<div>For ${bmi} bmi : Normal Range</div>`
+    // } else {
+    //   weightGuide.innerHTML = `<div>For ${bmi} bmi : Overweight</div>`
+    // }
   }
 });
