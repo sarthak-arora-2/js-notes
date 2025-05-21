@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        div{
+            background-color: lemonchiffon;
+            height: 350px;
+            width: 350px;
+        }
+        header > div > h2{
+            color: blue;
+        }
+        div.box > h2{
+            color: violet;
+        }
+        header > div > h2 ~ p{   /* ~ is used to specify sibling selection */
+            color: crimson;
+        }
+        div > h2 + p{   /* + is used to specify just the first p tag after h2 */       
+            color: rgb(30, 139, 0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h2>Heading In The Header</h2>
+            <p>This is the header container.</p>
+            <p>This is the header container.</p>
+            <p>This is the header container.</p>
+            <p>This is the header container.</p>
+        </div>
+    </header>
+    <div class="box">
+        <h2>Heading Inside The Main Box</h2>
+        <p>This is the main box container.</p>
+        <p>This is the main box container.</p>
+        <p>This is the main box container.</p>
+        <p>This is the main box container.</p>
+    </div>
+</body>
+</html>
