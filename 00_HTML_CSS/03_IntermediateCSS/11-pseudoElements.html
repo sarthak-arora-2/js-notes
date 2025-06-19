@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        p::first-letter{
+            color: blueviolet;
+            font-size: 50px;
+        }
+        h1{
+            position: relative;
+            display: inline-block;
+            width: max-content;
+            
+        }
+        h1::after{
+            content: '';
+            background-color: red;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            height: 4px;
+            width: 100%;
+            background-image: linear-gradient(90deg, red 10%, green 50%, blue 80%);
+
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste velit corrupti deleniti vitae facilis eaque vel temporibus inventore blanditiis soluta harum debitis aspernatur dignissimos ipsum, libero nisi quaerat. Beatae possimus praesentium rem, aliquid fuga ducimus qui soluta, earum quaerat molestias officiis! Quasi veritatis ex ullam molestiae qui doloremque quidem sapiente!</p>
+    <h1>Hello World</h1>
+</body>
+</html>

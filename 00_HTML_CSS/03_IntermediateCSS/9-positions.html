@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            align-content: center;         
+        }
+        /* Parent element pe relative laga do aur child element pe absolute toh child element ki positon relative element se decide hogi. */
+        div{
+            margin: 0 auto;
+            width: 500px;
+            position: relative;  
+        }
+        input{
+            height: 50px;
+            width: 500px;
+            background-color: wheat;
+            border-radius: 20px;
+            border-style: solid grey;
+            margin: 0 auto; 
+            box-sizing: border-box;
+        }
+        input:hover{
+            background-color: lemonchiffon;
+ 
+        }
+        button{
+            position: absolute;
+            right: 0;
+            border-radius: 20px;
+            height: 50px;
+            width: 50px;
+            z-index: 1;
+        }
+        button:hover{
+            background-color: aqua;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Search">
+        <button>@</button>
+    </div>
+    
+</body>
+</html>

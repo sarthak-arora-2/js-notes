@@ -23,7 +23,7 @@ const JsUser = {
 // console.log(JsUser.email)
 // console.log(JsUser["email"])
 // console.log(JsUser["full name"])
-// console.log(JsUser[mySym])
+// console.log(JsUser[mySym])  // mykey1
 
 JsUser.email = "hitesh@chatgpt.com"
 // Object.freeze(JsUser)  // After using this JsUser objects gets freezed and can not be modified later.
@@ -40,4 +40,19 @@ JsUser.greetingTwo = function(){
 // JsUser.greeting()
 console.log(JsUser.greeting())  // console.log give undefined because JsUser.greeting() is not returning anything.
 // JsUser.greetingTwo()
-console.log(JsUser.greetingTwo())  // console.log give undefined because JsUser.greeting() is not returning anything.
+console.log(JsUser.greetingTwo())  // console.log give undefined because JsUser.greetingTwo() is not returning anything.
+
+console.log(JsUser)
+// Objects porperties are not in order in which they were set.
+// {
+//   name: 'Hitesh',
+//   'full name': 'Hitesh Choudhary',
+//   age: 18,
+//   location: 'Jaipur',
+//   email: 'hitesh@microsoft.com',
+//   isLoggedIn: false,
+//   lastLoginDays: [ 'Monday', 'Saturday' ],
+//   greeting: [Function (anonymous)],
+//   greetingTwo: [Function (anonymous)],
+//   [Symbol(key1)]: 'mykey1'
+// }

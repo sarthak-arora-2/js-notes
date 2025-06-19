@@ -21,28 +21,32 @@ const gameName = new String("Sarthak-Arora") // This gives an object containing 
 // 12: "a"
 // length: 13
 
-console.log(gameName)
-console.log(gameName[0])
+console.log(gameName)  // [String: 'Sarthak-Arora']
+console.log(gameName[0])  // S
 
 // console.log(gameName.length);
 // console.log(gameName.toUpperCase());
-console.log(gameName.charAt(2));
-console.log(gameName.indexOf('t'));
+console.log(gameName.charAt(2));  // r
+console.log(gameName.indexOf('t'));  // 3
 
 const newString = gameName.substring(0, 4)
-console.log(newString);
+console.log(newString);  // Sart. 4th index is not included.
 
 const anotherString = gameName.slice(-12, 4)  // Can give negative value index.
 console.log(anotherString);
 
 const newStringOne = "   hitesh    "
-console.log(newStringOne);
+console.log(newStringOne);  //    hitesh
 console.log(newStringOne.trim());
+// The trim() method in JavaScript is a built-in string method used to remove whitespace from both ends (leading and trailing) of a string. 
 
 const url = "https://hitesh.com/hitesh%20choudhary"
 
-console.log(url.replace('%20', '-'))
+console.log(url.replace('%20', '-'))  // https://hitesh.com/hitesh-choudhary
 
-console.log(url.includes('sundar'))
+console.log(url.includes('sundar'))  // false
 
-console.log(gameName.split('-'));
+const names = "Sarthak, Varun, Shally, Raunak"
+console.log(gameName.split('-'));  // [ 'Sarthak', 'Arora' ]. Same as python.
+console.log(firstName.split())  // [ 'Sarthak' ]
+console.log(names.split(','))
